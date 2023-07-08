@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./image/luxury-house-real-estate-sale-property-generative-ai.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: aquamarine;
+  font-size: 80px;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+.navbar ul li a:hover {
+  border-bottom: solid aquamarine;
+  font-size: 22px;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+.content h1 {
+  font-size: 70px;
+  margin-top: 80px;
+  text-decoration: none;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid aquamarine;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  background: aquamarine;
+  color: #252525;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
