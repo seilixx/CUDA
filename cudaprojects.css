@@ -220,3 +220,87 @@ input {
   --current-color1: #eceaed;
   --current-color2: black;
 }
+
+section {
+  min-height: 82.2vh;
+  padding: 10rem 9% 2rem;
+}
+span {
+  color: aquamarine;
+}
+.rass {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.project {
+  background: #252525;
+}
+.project h2 {
+  margin-bottom: 4rem;
+}
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.project-container .project-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem grey;
+  overflow: hidden;
+  display: flex;
+}
+.project-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.project-box:hover img {
+  transform: scale(1.1);
+}
+
+.project-box .project-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 450px;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), aquamarine);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+  font-weight: 800;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.project-box:hover .project-layer {
+  transform: translateY(0);
+}
+
+.project-layer h4 {
+  font-size: 3rem;
+}
+.project-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.project-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: #fff;
+  border-radius: 50%;
+}
+.project-layer a i {
+  font-size: 2rem;
+  color: #252525;
+}
+
