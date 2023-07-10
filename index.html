@@ -3,35 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./cuda.css" />
-    <title>CUDA|architecture</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CUDA|ARCHITECTURE</title>
   </head>
   <body>
-    <div class="banner">
+    <header>
       <div class="navbar">
-        <a href="./index.html" style="text-decoration: none; color: aquamarine"><h1 class="logo">CUDA</h1></a>
-        <ul>
+        <div class="logo"><a href="./index.html">CUDA</a></div>
+        <ul class="navlinks">
           <li>
-            <a href="./index.html" style="border-bottom: solid aquamarine"
-              >HOME</a
-            >
+            <a href="./index.html" style="border-bottom: 2px solid aquamarine">home</a>
           </li>
-          <li><a href="./cudaprojects.html">PROJECTS</a></li>
-          <li><a href="./cudaportfolio.html">PORTFOLIO</a></li>
-          <li><a href="*">CONTACT US</a></li>
+          <li><a href="./cudaprojects.html">projects</a></li>
+          <li><a href="./cudaportfolio.html">portfolio</a></li>
+          <li><a href="*">contact us</a></li>
         </ul>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
-    </div>
-    <div class="content">
-      <h1>CREATE YOUR HOUSE</h1>
-      <p>
-        cuda architecture propose l'un des meilleurs services en réalisation de
-        plan et conception de maison
-      </p>
-      <div>
-        <button type="button">WATCH MORE</button>
-        <button type="button">CONTACT</button>
+
+      <div class="dropdown_menu">
+        <li><a href="./index.html">home</a></li>
+        <li><a href="./cudaprojects.html">projects</a></li>
+        <li><a href="./cudaportfolio.html">portfolio</a></li>
+        <li><a href="*">contact us</a></li>
       </div>
-    </div>
+    </header>
+    <main>
+      <section id="hero">
+        <h1>CREATE YOUR HOUSE</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam
+          voluptate, cumque maiores asperiores magnam molestias dolores
+          exercitationem distinctio repellendus perspiciatis repellat debitis
+          eveniet nulla explicabo vero earum corrupti aliquid?
+        </p>
+      </section>
+    </main>
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const toggleIcon = document.querySelector(".toggle i");
+      const dropdown_menu = document.querySelector(".dropdown_menu");
+
+      toggle.onclick = function () {
+        dropdown_menu.classList.toggle("open");
+        const isOpen = dropdown_menu.classList.contains("open");
+
+        toggleIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
   </body>
 </html>
