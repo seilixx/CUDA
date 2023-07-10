@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cudacontact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CUDA|ARCHITECTURE</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="./index.html">CUDA</a></div>
+        <ul class="navlinks">
+          <li>
+            <a href="./index.html" 
+              >home</a
+            >
+          </li>
+          <li><a href="./cudaprojects.html">projects</a></li>
+          <li><a href="./cudaportfolio.html">portfolio</a></li>
+          <li><a href="./cudacontact.html" style="border-bottom: 2px solid aquamarine">contact us</a></li>
+        </ul>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="./index.html">home</a></li>
+        <li><a href="./cudaprojects.html">projects</a></li>
+        <li><a href="./cudaportfolio.html">portfolio</a></li>
+        <li><a href="*">contact us</a></li>
+      </div>
+    </header>
+    <main>
+      <section class="contact" id="contact">
+        <h2 class="rass">Contact <span>Me!</span></h2>
+        <form action="*">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Adress" />
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Mobile Number" />
+            <input type="text" placeholder="Email Subject" />
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your message"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </form>
+      </section>
+    </main>
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const toggleIcon = document.querySelector(".toggle i");
+      const dropdown_menu = document.querySelector(".dropdown_menu");
+
+      toggle.onclick = function () {
+        dropdown_menu.classList.toggle("open");
+        const isOpen = dropdown_menu.classList.contains("open");
+
+        toggleIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
