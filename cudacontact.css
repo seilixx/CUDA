@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./image/3d-house-plans.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.navlinks a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.navlinks a:hover {
+  border-bottom: 2px solid aquamarine;
+}
+.logo {
+  margin-top: 40px;
+}
+.logo a {
+  font-size: 80px;
+  text-decoration: none;
+  color: aquamarine;
+}
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navlinks {
+  margin-top: 45px;
+  display: flex;
+  gap: 2rem;
+}
+.navbar .toggle {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu a {
+  text-decoration: none;
+  color: #fff;
+}
+.dropdown_menu.open {
+  margin-top: 45px;
+  height: 170px;
+}
+.dropdown_menu.open a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  color: #fff;
+  margin: 20px;
+  padding: 60px;
+}
+span {
+  color: aquamarine;
+}
+.rass {
+  text-align: center;
+  font-size: 4.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: aquamarine;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem aquamarine;
+  font-size: 1.6rem;
+  color: #252525;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  box-shadow: none;
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: aquamarine;
+  background: #323946;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .navbar .navlinks {
+    display: none;
+  }
+  .navbar .toggle {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+  .btn {
+    padding: 10px 15px;
+    font-size: 20px;
+  }
+}
