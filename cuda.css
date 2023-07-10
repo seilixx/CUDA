@@ -1,87 +1,131 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  list-style: none;
 }
-.banner {
-  width: 100%;
+body {
   height: 100vh;
+  background-color: #000;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(./image/luxury-house-real-estate-sale-property-generative-ai.jpg);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+}
+.navlinks a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.navlinks a:hover {
+  border-bottom: 2px solid aquamarine;
+}
+.logo {
+  margin-top: 40px;
+}
+.logo a {
+  font-size: 80px;
+  text-decoration: none;
+  color: aquamarine;
+}
+header {
+  position: relative;
+  padding: 0 2rem;
 }
 .navbar {
-  width: 85%;
-  margin: auto;
-  padding: 35px 0;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  color: aquamarine;
-  font-size: 80px;
+.navbar .navlinks {
+  margin-top: 45px;
+  display: flex;
+  gap: 2rem;
 }
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
+.navbar .toggle {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
-.navbar ul li a {
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu a {
   text-decoration: none;
-  text-transform: uppercase;
   color: #fff;
 }
-.navbar ul li a:hover {
-  border-bottom: solid aquamarine;
-  font-size: 22px;
+.dropdown_menu.open {
+  margin-top: 45px;
+  height: 170px;
 }
-.content {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.dropdown_menu.open a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
-.content h1 {
+
+section#hero h1 {
   font-size: 70px;
   margin-top: 80px;
   text-decoration: none;
 }
 
-.content p {
+section#hero p {
   margin: 20px auto;
   font-weight: 100;
   line-height: 25px;
-}
-button {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-  border: 2px solid aquamarine;
-  background: transparent;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
+  width: 300px;
 }
 
-button:hover {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 20px;
-  font-weight: bold;
-  border: 2px solid transparent;
-  background: aquamarine;
-  color: #252525;
-  position: relative;
-  overflow: hidden;
-  transition: 0.5s;
+@media (max-width: 992px) {
+  .navbar .navlinks {
+    display: none;
+  }
+  .navbar .toggle {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
 }
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
