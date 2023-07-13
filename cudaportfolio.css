@@ -1,165 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Poppins:wght@200&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  list-style: none;
 }
-.banner {
-  width: 100%;
-  height: 150px;
-  background-color: #252525;
-  background-size: cover;
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./image/modern-business-building-scenery-touching-sky.jpg);
   background-position: center;
+  background-size: cover;
+}
+.navlinks a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.navlinks a:hover {
+  border-bottom: 2px solid aquamarine;
+}
+.logo {
+  margin-top: 40px;
+}
+.logo a {
+  font-size: 80px;
+  text-decoration: none;
+  color: aquamarine;
+}
+header {
+  position: relative;
+  padding: 0 2rem;
 }
 .navbar {
-  width: 85%;
-  margin: auto;
-  padding: 35px 0;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  color: aquamarine;
-  font-size: 80px;
+.navbar .navlinks {
+  margin-top: 45px;
+  display: flex;
+  gap: 2rem;
 }
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
+.navbar .toggle {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
-.navbar ul li a {
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu a {
   text-decoration: none;
-  text-transform: uppercase;
   color: #fff;
 }
-.navbar ul li a:hover {
-  border-bottom: solid aquamarine;
-  font-size: 22px;
+.dropdown_menu.open {
+  margin-top: 45px;
+  height: 170px;
 }
-.container {
-  padding-top: 190px;
-  padding-left: 200px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(./image/modern-business-building-scenery-touching-sky.jpg);
-  background-size: cover;
-  background-position: center;
-  overflow-x: hidden;
-  min-height: 66.2vh;
-}
-.container .hero-text {
-  margin-bottom: 40px;
-}
-.container .hero-text h1 {
+.dropdown_menu.open a {
+  text-decoration: none;
   color: #fff;
-  font-size: 47px;
-  font-weight: 1200;
-  line-height: 1.2;
-  margin: 20px 0 20px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  color: #fff;
+  margin: 20px;
+  padding: 60px;
 }
 span {
   color: aquamarine;
 }
-.container .hero-text h3 {
-  color: #eee;
-  font-weight: 800;
+.hero h6 {
   font-size: 20px;
 }
-.container .hero-text p {
-  width: 440px;
-  max-width: 100%;
-  color: #eee;
-  font-size: 17px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  font-weight: 600;
+.hero h2{
+  
 }
-.social a {
-  text-decoration: none;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 17px;
-  color: #fff;
-  cursor: pointer;
-  margin-right: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-bottom: 35px;
+@media (max-width: 992px) {
+  .navbar .navlinks {
+    display: none;
+  }
+  .navbar .toggle {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
 }
-.social a:hover {
-  transform: scale(1.1);
-  background-color: #7fffd4;
-  transition: 0.4s;
-}
-.container .hero-text button {
-  color: #eee;
-  background: transparent;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 8px 30px;
-  border: 2px solid #7fffd4;
-  border-radius: 20px;
-}
-.container .hero-text button:hover {
-  color: #252525;
-  background: #7fffd4;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 8px 30px;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  transition: 0.4s;
-}
-.bottom {
-  margin-top: 243px;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.bottom p {
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 2px;
-  font-size: 17px;
-}
-.container2 {
-  padding-top: 190px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(./image/grey.jpg);
-  background-size: cover;
-  background-position: center;
-  overflow-x: hidden;
-  min-height: 82.2vh;
-}
-.about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.about h1 {
-  font-size: 47px;
-  font-weight: 1200;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #7fffd4;
-  margin-left: 240px;
-  border-right: 2px solid #7fffd4;
-  padding-right: 15px;
-}
-.about p {
-  padding: 35px;
-  margin-right: 300px;
-  width: 500px;
-  height: auto;
-  color: #eee;
-  font-size: 20px;
-  border: 2px solid #7fffd4;
-  border-radius: 15px;
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
